@@ -1,0 +1,140 @@
+// @import './Variables.scss';
+@import './Constants.scss';
+
+@mixin button__styles--1{
+    &,
+    &:link,
+    &:visited {
+        // text-transform: uppercase;
+        text-decoration: none;
+        // color: $color-white;
+        // font-size: 1.5rem;
+        font-weight: 500;
+        font-family: $font-tertiary;
+        // padding: 1rem 1.7rem;
+        // display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s; //
+        // position: relative; //
+        border: none;
+        cursor: pointer;  
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        // box-shadow: 0 1rem 1.5rem rgba($color-white, .4);
+        box-shadow: 0 0.5rem 1rem rgba($color-white, .4);
+
+        perspective: $perspective_value;
+
+        // &::after {
+        //     transform: scaleX(1.4) scaleY(1.6);
+        //     opacity: 0;
+        // }
+    }
+
+    &:active,
+    &:focus {
+        // outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 0.3rem 0.7rem rgba($color-white, .4);
+        perspective: $perspective_value;
+    }
+}
+
+
+@mixin button__styles--2{
+    &,
+    &:link,
+    &:visited {
+        background-color: $color-tertiary;
+        color: white;
+        // text-transform: uppercase;
+        text-decoration: none;
+        // color: $color-white;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: $font-tertiary;
+        letter-spacing: 1px;
+        padding: 0.2rem 1.7rem;
+        // display: inline-block;
+        // border-radius: 10rem;
+        transition: all .2s; //
+        // position: relative; //
+        // text-align: center;
+        border: none;
+        cursor: pointer;  
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid;
+        border-width: 3px;
+        border-color: transparent;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        // box-shadow: 0 1rem 1.5rem rgba($color-white, .4);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .4);
+
+        perspective: $perspective_value;
+        background-color: $color-grey-light-1;
+        color: $color-tertiary;
+        border-color: $color-tertiary;
+
+        // &::after {
+        //     transform: scaleX(1.4) scaleY(1.6);
+        //     opacity: 0;
+        // }
+    }
+
+    &:active,
+    &:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 0.3rem 0.7rem rgba($color-white, .4);
+    }
+}
+
+
+@mixin title__styles{
+    // background-color: red;
+    font-size: 3.5rem;
+    font-family: $font-secondary;
+    letter-spacing: 5px;
+    padding: 2.2rem;
+    margin-bottom: 12rem;
+    color: $color-primary-dark;
+    // text-shadow: $shadowSmall-value;
+    
+    @include respond($TAB_PORTRAIT){
+        padding: 1.5rem;
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == $PHONE {
+        @media only screen and (max-width: 450px) { @content };    
+    }
+    @if $breakpoint == $TAB_PORTRAIT {
+        @media only screen and (max-width: 800px) { @content };     
+    }
+    @if $breakpoint == $TAB_LANDSCAPE {
+        @media only screen and (max-width: 1000px) { @content };    
+    }
+    @if $breakpoint == $DESKTOP {
+        @media only screen and (max-width: 1600px) { @content };    
+    }
+    @if $breakpoint == $BIG_SCREEN {
+        @media only screen and (min-width: 1600px) { @content };    
+    }
+    // @if $breakpoint == $HUGE_SCREEN {
+    //     @media only screen and (min-width: 112.5em) { @content };    //1800
+    // }
+}

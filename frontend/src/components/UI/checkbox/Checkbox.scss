@@ -1,0 +1,19 @@
+@import '../../abstracts/Variables.scss';
+
+.checkbox{
+    &__container{
+        // background-color: $color-secondary-light;
+        // width: max-content;
+        // width: 25rem;
+        display: flex;
+        padding: 0.6rem 2rem;
+        margin: 0.6rem;
+        align-items: center;
+
+        & p{
+            // font-size: 1.7rem;
+            margin-left: 2rem;
+            color: black;
+        }
+    }
+}

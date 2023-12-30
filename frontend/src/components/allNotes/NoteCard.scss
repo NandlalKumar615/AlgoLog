@@ -1,0 +1,81 @@
+@import '../abstracts/Variables.scss';
+@import '../abstracts/Mixins.scss';
+
+.noteCard{
+
+    &:hover{
+        // padding: 3px;
+        transform: translateY(-5px);
+        // cursor: pointer;
+        box-shadow: $shadow-value;
+    }
+    
+    & h4{
+        font-size: 2.2rem;
+        font-family: $font-tertiary;
+        text-align: center;
+    }
+
+    & p{
+        // background-color: plum;
+        margin: 3px 0;
+        height: 55%;
+        display: flex;
+        align-items: center;
+    }
+
+    & div{
+        // background-color: red;
+        width: 100%;
+        font-size: 2rem;
+        font-family: $font-tertiary;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        // flex-direction: row;
+    }
+
+    &__d2{
+        &--1{
+            width: 40%;
+            // background-color: green;
+            display: flex;
+            justify-content:space-between;
+        }
+    }
+
+    &__link{
+        @include button__styles--1;
+        background-color: transparent;
+        // padding: 0.7rem;
+        height: 5rem;
+        width: 5rem;
+        color: black;
+        // border: none;
+        // width: 2rem;
+        // color: yellow;
+    }
+}
+
+
+.modalContainer{
+
+    width: 70vw;
+    max-width: 60rem;
+    background-color: $color-primary-light;
+    padding: 3rem;
+    border-radius: 3rem;
+
+    & p{
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+
+    & button{
+        @include button__styles--1;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        background-color: $color-primary-dark;
+    }
+}

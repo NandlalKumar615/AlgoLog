@@ -1,0 +1,21 @@
+@import '../abstracts/Variables.scss';
+@import '../abstracts/Mixins.scss';
+
+.title{
+    @include title__styles;
+}
+
+.allNotes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.createNoteButton{
+    @include button__styles--1;
+    margin: auto;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    background-color: $color-primary-dark;
+    margin-top: 14rem;
+}

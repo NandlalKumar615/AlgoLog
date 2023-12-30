@@ -1,0 +1,12 @@
+@import '../abstracts/Variables.scss';
+@import '../abstracts/Mixins.scss';
+
+.title{
+    @include title__styles;
+}
+
+.allNotes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

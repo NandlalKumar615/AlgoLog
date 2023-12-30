@@ -1,0 +1,206 @@
+@import '../abstracts/Variables.scss';
+@import '../abstracts/Mixins.scss';
+@import '../abstracts/Constants.scss';
+.searchAndFilter {
+    // background-color: red;
+    width: 90%;
+    height: 0rem;
+    // margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    
+    // justify-content: center;
+    // align-items: center;
+
+    &__clicked{
+        height: max-content;
+    }
+   
+}
+
+.search {
+    width: 100%;
+    // height: 1rem;
+    display: flex;
+    align-items: center;
+    // justify-content: space-evenly;
+    // background-color: rgb(0, 255, 183);
+    @include respond($TAB_PORTRAIT){
+        flex-direction: column;
+        height: 14rem;
+    }
+
+    &__box {
+        // background-color: green;
+        width: 90%;
+        height: 5rem;
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+
+        @include respond($TAB_PORTRAIT){
+            width: 100%;
+        }
+        // @include respond($PHONE){
+        //     transform: translateX(-11%);
+        // }
+    }
+
+    &__outer {
+        background-color: $color-primary;
+        width: 92%;
+        height: 100%;
+        border-radius: 5rem;
+        padding: 5px;
+        transition: all 0.5s;
+
+        &:hover {
+            width: 100%;
+        }
+
+    }
+
+    &__inner {
+        background-color: $color-grey-light-1;
+        width: 100%;
+        height: 100%;
+        border-radius: 5rem;
+        display: flex;
+
+    }
+
+    &__area {
+        width: 90%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 2rem;
+        color: $color-grey-dark-2;
+        transition: all 0.2s;
+
+        &:hover {
+            font-size: 2.5rem;
+        }
+
+        &:active,
+        &:focus {
+            font-size: 2.3rem;
+        }
+    }
+}
+
+
+.filter {
+
+    // background-color: red;
+    overflow: hidden;
+    margin: 2rem 2rem;
+    // position: absolute;
+    // height: 30rem;
+    // width: 90%;
+    display: flex;
+    justify-content: center;
+
+    &__button {
+        // background-color: blue;
+        width: 30%;
+        min-width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & button {
+            @include button__styles--2;
+            width: max-content;
+            height: max-content;
+            // height: ;
+            z-index: 10;
+            // margin: 1rem 0;
+            // background-color :$color-tertiary;
+
+            & span {
+                // background-color: red;
+                display: flex;
+                align-items: center;
+                padding-left: 7px;
+            }
+        }
+    }
+
+    &__section {
+        width: 100%;
+        // height: 30rem;
+        background-color: $color-tertiary-light;
+        transform: translateY(-110%);
+        // opacity: 0;
+        transition: all 0.7s;
+        // position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        // justify-items: center;
+        padding: 2rem;
+    }
+    
+    &__clicked{
+        transform: translateY(0);
+        // opacity: 1;
+        // height: 30rem;
+        // display: block;
+    }
+
+    &__options{
+        background-color: rgba($color-grey-light-1, 0.4);
+        padding: 1rem;
+        margin: 1.5rem;
+    }
+    
+    &__topic__parts{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__limit{
+        // background-color: red;
+
+        & input{
+            width: 5rem;
+            height: 4rem;
+        }
+
+        & label{
+            margin: 0 2rem;
+        }
+
+        & button{
+            @include button__styles--1;
+            background-color: $color-primary-dark;
+            color: white;
+            width: 20rem;
+            height: 4rem;
+            font-size: 1.6rem;
+            margin: 3rem 2rem 1rem 2rem;
+            margin-top: 3rem;
+
+        }
+    }
+}

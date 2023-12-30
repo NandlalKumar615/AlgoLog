@@ -1,0 +1,13 @@
+.loader__ring {
+    width: 20rem;
+    height: 20rem;
+    border: 0px solid #000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.loader__ring:nth-child(1) {
+    border-bottom-width: 8px;
+    border-color: rgb(255, 255, 255);
+    animation: rotate1 2s linear infinite;
+}

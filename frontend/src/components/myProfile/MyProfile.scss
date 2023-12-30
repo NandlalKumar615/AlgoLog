@@ -1,0 +1,99 @@
+@import '../abstracts/Variables.scss';
+@import '../abstracts/Mixins.scss';
+
+.myProfile{
+    background-color: $color-secondary;
+    // margin: 3rem;
+    width: 55rem;
+    max-width: 80%;
+    // display: flex;
+    // justify-items: center;
+    // align-items: center;
+    // flex-direction: column;
+    // position: absolute;
+    // top: 50vh;
+    // left: 50vw;
+    // transform: translate(-50%,-50%);
+    // height: 90rem;
+    display: block;
+    margin: 7rem auto;
+    border-radius: 3rem;
+    padding: 4rem 2rem;
+
+    &__about{
+        // background-color: blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+        // padding: 3rem;
+
+        & img{
+            width: 20rem;
+            height: 20rem;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        & h3{
+            // background-color: red;
+            // display: flex;
+            // align-items: center;
+            font-size: 2.1rem;
+            margin-bottom: 1.5rem;
+            font-family: $font-tertiary;
+            // text-align: center;
+        }
+        
+        & h4{
+            font-family: $font-tertiary;
+            font-weight: 600;
+            // background-color: red;
+            text-align: left;
+        }
+    }
+
+    // &__details{
+    //     // margin: 5rem;
+    // }
+
+    &__stats{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        & > div{
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            // gap: 4rem;
+        }
+
+        & span{
+            background-color: $color-primary-light;
+            margin: 0 1.2rem;
+            padding: 0.6rem 1rem;
+            border-radius: 0.5rem;
+            // margin-bottom: 5rem;
+        }
+
+        & p{
+            // background-color: red;
+            font-family: $font-tertiary;
+            font-weight: 500;
+            // width: 15rem;
+        }
+
+        & button{
+            @include button__styles--2;
+            margin: auto;
+            margin: 2rem 4rem 0 4rem;
+            // margin-top: 2rem;
+        }
+    }
+}

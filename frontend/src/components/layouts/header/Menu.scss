@@ -1,0 +1,97 @@
+@import '../../abstracts/Variables.scss';
+@import '../../abstracts/Mixins.scss';
+
+.menu{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    @include respond($TAB_PORTRAIT){
+        top: 1rem;
+        right: 1rem;
+    }
+
+    // transform: scale(100);
+    // cursor: pointer;
+
+    &-Gradient{
+        width: 6rem;
+        height: 6rem;
+        // background-color: yellow;
+        background: radial-gradient($color-primary,$color-primary-dark);
+        border-radius: 50%;
+        position:fixed;
+        top: 5rem;
+        right: 5rem;
+        z-index: 200;
+        // transition: all 0.5s cubic-bezier(.68,.05,.45,.96);
+        transition: all 0.5s ease-in-out;
+        transform: translateX(50%) translateY(-50%);
+        @include respond($TAB_PORTRAIT){
+            top: 4rem;
+            right: 4rem;
+        }
+    }
+
+    &-Scale{
+        // transform: scale(80);
+        width :250vmax;
+        height: 250vmax;
+    }
+
+    
+   &-Bars{
+    // background-color: blue;
+    position: relative;
+    z-index: 400;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.2);
+    }
+   }
+
+    &-Bar{
+        width: 3rem;
+        height: 0.2rem;
+        background-color: $color-white;
+        margin: 0.7rem;
+        transition: all 0.5s ease-out;
+        // cursor: pointer;
+
+        // z-index: 20rem;
+        // flex-grow: 1;
+
+    }
+
+    &-Top{
+        // background-color: blue;
+        // transition: all 0.5s;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        
+        
+        // transform: scaleX(1.1)
+    }
+
+    &-Middle{
+        // transition: all 0.2s;
+        background-color: transparent;
+    }
+
+    &-Bottom{
+        // transform-origin: 50%;
+        // transition: all 0.5s;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0;
+    }
+}

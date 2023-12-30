@@ -1,0 +1,97 @@
+@import '../abstracts/Variables.scss';
+@import '../abstracts/Mixins.scss';
+
+.revisionCard{
+    margin: 6rem auto;
+    width: 85%;
+    height: auto;
+    // display: grid;
+    // grid-template-columns: 1fr 4fr;
+    // grid-template-rows: 3fr 1fr;
+
+    &:hover{
+        // padding: 3px;
+        transform: translateY(-2px);
+        // cursor: pointer;
+        box-shadow: $shadow-value;
+    }
+    // & h4{
+    //     grid-column: 1/2;
+    // }
+
+    // & p{
+    //     grid-column: 2/-1;
+    // }
+
+    // & input{
+    //     width: 30px;
+    //     transform: scale(1.6);
+    //     accent-color: green;
+    // }
+
+    &__d1{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        & h4{
+            width: 20rem;
+            // flex: 0 1 1;
+            padding: 2rem;
+            // flex-grow: 1;
+        }
+        
+        & div{
+            width: 70%;
+            padding: 1rem;
+            // min-width: 40rem;
+            // flex: 0 1 4;
+            // background-color: gray;
+            flex-grow: 1;
+        }
+    }
+
+    &__d2{
+        // grid-column: 1/-1;
+        width: 100%;
+        // background-color: red;
+        display: flex;
+        flex-wrap: wrap;
+        // flex-direction: column;
+        justify-content: space-evenly;
+        // grid-template-columns: repeat(3,1fr);
+
+        & div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 2rem 1rem;
+            // padding: 2rem;
+            // background-color: grey;
+            width: 27rem;
+            // width: 25vw;
+        }
+        
+        // &--1{
+        //     // width: 35rem;
+        // }
+        &--2{
+            padding: 0 5rem;
+        }
+        // &--3{
+        //     // width: 35rem;
+        // }
+
+        & button{
+            @include button__styles--1;
+            background-color : $color-primary-dark;
+            width: 11.5rem;
+            height: 3.7rem;
+            // padding: 1rem;
+            color: $color-white;
+            // padding: none;
+            // margin: 0 2rem;
+        }
+    }
+}

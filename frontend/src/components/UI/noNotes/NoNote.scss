@@ -1,0 +1,12 @@
+@import '../../abstracts/Variables.scss';
+
+.noNote{
+    background-color: $color-secondary;
+    width: 70%;
+    padding: 5rem 2rem;
+    margin: 10rem 0;
+    color : $color-grey-light-1;
+    font-size: 2.5rem;
+    font-family: $font-secondary;
+    border-radius: 3rem;
+}

@@ -1,0 +1,43 @@
+@import "./components//abstracts/Variables.scss";
+@import "./components/abstracts/Mixins.scss";
+@import "./components/abstracts/constants.scss";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Comfortaa:wght@300;400;700&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  // @include respond($BIG_SCREEN){
+  //   font-size: 65%;
+  // }
+  // @include respond($TAB_LANDSCAPE){
+  //   font-size: 61%;
+  // }
+  // @include respond($TAB_PORTRAIT){
+  //   font-size: 60%;
+  // }
+  // @include respond($PHONE){
+  //   font-size: 59%;
+  // }
+}
+
+
+body {
+//   background-color: $color-primary;
+  background-color: $color-primary-light;
+  // margin: 0 2rem;
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  color: $color-grey-dark-3;
+  font-weight: 400;
+  line-height: 1.6;
+}

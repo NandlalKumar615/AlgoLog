@@ -1,0 +1,26 @@
+@import '../abstracts/Animations.scss';
+// @import '../abstracts/Variables.scss';
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+.modal {
+  position: fixed;
+  top: 45vh;
+  left: 50vw;
+  // background-color: blue;
+  // padding: 3rem;
+  // border-radius: 5rem;
+  // width: 70vw;
+  // max-width: 60rem;
+  z-index: 1100;
+  animation: slide-down 0.7s ease-out forwards;
+}
+  

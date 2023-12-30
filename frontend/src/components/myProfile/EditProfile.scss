@@ -1,0 +1,98 @@
+@import '../abstracts/Variables.scss';
+@import '../abstracts/Mixins.scss';
+
+.editProfile{
+    &__container {
+        // background-color: red;
+        position: relative;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        margin: 10rem auto;
+        background-color: $color-secondary;
+        height: 53rem;
+        width: 35rem;
+        max-width: 90vw;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 7px 7px 10px 3px #24004628;
+
+
+        & form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 3rem;
+        }
+
+        & label {
+            // background-color: red;
+            color: #fff;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+        }
+
+        & input {
+            // width: 100%;
+            // height: 5rem;
+            // background: $color-grey-light-1;
+            // border: none;
+            // outline: none;
+            // border-radius: 4px;
+
+            width: 100%;
+            color: black;
+            font-size: 1.5rem;
+            font-family: $font-tertiary;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            border-radius: 3px;
+            background-color: $color-grey-light-1;
+            border: none;
+            border-bottom: 3px solid transparent;
+            // transition: all .3s;
+            outline: none;
+            text-align: left;
+
+            &:focus {
+                box-shadow: $shadowSmall-value;
+                border-bottom: 3px solid rgb(53, 231, 53);
+            }
+    
+            &:focus:invalid {
+                border-bottom: 3px solid orangered;
+            }
+        }
+
+       
+
+        & button {
+            @include button__styles--1;
+            background-color: $color-primary-dark;
+            font-size: 1.7rem;
+            // width: 12rem;
+            // height: 4rem;
+            padding: 1rem 2.5rem;
+            margin-top: 1rem;
+            color: $color-white;
+        }
+    }
+
+    &__show{
+        background-color: $color-grey-light-1;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        // justify-content: space-between;
+
+        &__icon{
+            // background-color: #573b8a;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            margin-right: 1rem;
+        }
+    }
+}

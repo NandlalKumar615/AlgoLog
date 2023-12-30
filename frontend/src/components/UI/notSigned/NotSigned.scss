@@ -1,0 +1,21 @@
+@import '../../abstracts/Variables.scss';
+@import '../../abstracts/Mixins.scss';
+
+.notSigned{
+    background-color: $color-secondary;
+    width: 70%;
+    padding: 5rem 2rem;
+    margin: 10rem auto 7rem;
+    color : $color-grey-light-1;
+    font-size: 2.5rem;
+    font-family: $font-secondary;
+    border-radius: 3rem;
+    // display: flex;
+    // justify-content: center;
+
+    &__link{
+        @include button__styles--2;
+        width: max-content;
+        margin: auto;
+    }
+}
