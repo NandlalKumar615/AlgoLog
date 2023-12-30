@@ -10,7 +10,7 @@ app.use(cookieParser());
 
 //config
 if(process.env.NODE_ENVIRONMENT !== "PRODUCTION"){
-    require("dotenv").config({path:"config/config.env"});
+    require("dotenv").config({path:"backend/config/config.env"});
 }
 
 // Import Route
