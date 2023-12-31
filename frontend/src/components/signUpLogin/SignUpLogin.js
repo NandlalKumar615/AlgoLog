@@ -40,7 +40,7 @@ const SignUpLogin = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const formValues = Object.fromEntries(formData.entries());
-    const loginLink = "/api/v1/login";
+    const loginLink = "https://algo-log.vercel.app/api/v1/login";
     dispatch(fetchMyProfile());
     dispatch(setLoggedIn(true));
     dispatch(executeUserAction(loginLink,"post",formValues,nextCall));
