@@ -1,16 +1,16 @@
 const app = require("./app");
 const connectDatabase = require("./config/database")
-const cors = require("cors");
-const express = require("express");
+// const cors = require("cors");
+// const express = require("express");
 
-const exp = express(); 
-exp.use(cors(
-    {
-        origin: ["https://algo-log-snpg.vercel.app"],
-        method: ["POST", "GET"],
-        credentials: true
-    }
-))
+// const exp = express(); 
+// exp.use(cors(
+//     {
+//         origin: ["https://algo-log-snpg.vercel.app"],
+//         method: ["POST", "GET"],
+//         credentials: true
+//     }
+// ))
 
 //Handling uncaught Exception
 process.on("uncaughtException",err=>{
