@@ -1,16 +1,16 @@
 const app = require("./app");
 const connectDatabase = require("./config/database")
-const cors = require("cors");
-const express = require("express");
+// const cors = require("cors");
+// const express = require("express");
 
-const exp = express(); 
-exp.use(cors(
-    {
-        origin: ["https://algo-log-snpg.vercel.app"],
-        method: ["POST", "GET"],
-        credentials: true
-    }
-))
+// const exp = express(); 
+// exp.use(cors(
+//     {
+//         origin: ["https://algo-log-snpg.vercel.app"],
+//         method: ["POST", "GET"],
+//         credentials: true
+//     }
+// ))
 
 //Handling uncaught Exception
 process.on("uncaughtException",err=>{
@@ -23,7 +23,7 @@ process.on("uncaughtException",err=>{
 
 //config
 if(process.env.NODE_ENVIRONMENT !== "PRODUCTION"){
-    require("dotenv").config({path:"config/config.env"});
+    require("dotenv").config({path:"backend/config/config.env"});
 }
 
 //connecting to database
